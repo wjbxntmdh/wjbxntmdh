@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes · wjbxntmdh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <main class="shell">
+      <header class="hero">
+        <div class="badge" id="status-badge">
+          <span class="dot"></span>
+          <span id="status-text">Connecting…</span>
+        </div>
+        <h1>Notes</h1>
+        <p class="subtitle">
+          A tiny, fast board backed by an Express API. Jot something down —
+          it is saved instantly.
+        </p>
+      </header>
+
+      <form class="composer" id="note-form" autocomplete="off">
+        <input
+          id="note-input"
+          name="note"
+          type="text"
+          placeholder="What's on your mind?"
+          maxlength="280"
+          aria-label="Note text"
+        />
+        <button type="submit" id="add-button">Add note</button>
+      </form>
+
+      <section class="notes" id="notes-list" aria-live="polite"></section>
+
+      <p class="empty" id="empty-state" hidden>No notes yet — add your first one above.</p>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
